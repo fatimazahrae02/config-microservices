@@ -1,29 +1,31 @@
 package ma.commandesservice.health;
 
-import ma.commandesservice.repository.CommandeRepository;
+import lombok.RequiredArgsConstructor;
+
 import org.springframework.boot.health.contributor.Health;
 import org.springframework.boot.health.contributor.HealthIndicator;
 import org.springframework.stereotype.Component;
+import ma.commandesservice.repository.CommandeRepository;
 
-@Component
+@Component("commandes")
+@RequiredArgsConstructor
 public class CommandeHealthIndicator implements HealthIndicator {
 
-    private final CommandeRepository repo;
-
-    public CommandeHealthIndicator(CommandeRepository repo) {
-        this.repo = repo;
-    }
+    private final CommandeRepository commandeRepository;
 
     @Override
     public Health health() {
-        long count = repo.count();
+        long count = commandeRepository.count();
+
         if (count > 0) {
             return Health.up()
-                    .withDetail("message", "Il y a " + count + " commande(s)")
+                    .withDetail("message", "Le service commandes est fonctionnel")
+                    .withDetail("nombre_de_commandes", count)
+                    .build();
+        } else {
+            return Health.down()
+                    .withDetail("message", "Aucune commande trouvée")
                     .build();
         }
-        return Health.down()
-                .withDetail("message", "Aucune commande")
-                .build();
     }
 }
