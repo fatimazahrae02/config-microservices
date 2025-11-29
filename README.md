@@ -35,7 +35,7 @@ Il inclut plusieurs services indépendants communiquant entre eux via **Eureka D
 ---
 ## 🏗️ Screenshots
 
-![Configserver](screenshots/health)
+![Configserver](screenshots/health.png)
 ![Configserver](screenshots/health2)
 ![Configserver](screenshots/healthcommandes)
 
