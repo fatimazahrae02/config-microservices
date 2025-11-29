@@ -36,10 +36,23 @@ Il inclut plusieurs services indépendants communiquant entre eux via **Eureka D
 ## 🏗️ Screenshots
 
 ![Configserver](screenshots/health.png)
-![Configserver](screenshots/health2)
-![Configserver](screenshots/healthcommandes)
+![Configserver](screenshots/health2.png)
+![Configserver](screenshots/healthcommandes.png)
 
-![Liste commandes](screenshots/orders-list.png)
+![eureka](screenshots/eureka.png)
+
+![gestionproduits](screenshots/gestionproduits.png)
+![gestionproduits](screenshots/creerproduit.png)
+![gestionproduits](screenshots/gestionproduitsaprescreation.png)
+![gestionproduits](screenshots/modifierproduit.png)
+![gestionproduits](screenshots/listedescommandes.png)
+![gestionproduits](screenshots/commandepage2.png)
+
+
+
+
+
+
 
 
 
